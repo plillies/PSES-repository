@@ -1,0 +1,62 @@
+{% extends 'repository/base.html' %}
+
+{% block content %}
+
+<body>
+<div class="header">
+  <h2>PSES Analysis Using Advanced Python Algorithms</h2>
+<h2 style="background-color: #04AA6D;
+  color: white;">Demographic Results</h2>
+</div>
+
+<div class="topnav">
+  <a href="{% url 'repository:home' %}"><b>Home</b></a>
+  <a href="{% url 'repository:about' %}"><b>About</b></a>
+  <a href="{% url 'repository:warranty' %}"><b>Warranty Disclaimer</b></a>
+</div>
+
+<div class="outer">
+  <div class="inner">
+<br>
+    <p>Various demographic results by department can be selected below.
+    <br>Be sure to select from the sublist where indicated.</p>
+
+{% for file in files %}
+
+      {% if file.code == 'Age24to29' %}
+      <p><a href='{{ file.file.url }}'>Q114B - Age 24 to Age 29</a></p> 
+<!-- Url path requires repeat of file because holding directory has same name --> 
+      {% endif %}
+
+      {% if file.code == 'InternalAudit' %}
+      <p><a href='{{ file.file.url }}'>Q107S - Internal Audit</a></p> 
+      {% endif %}
+
+      {% if file.code == 'SouthEastAsian' %}
+      <p><a href='{{ file.file.url }}'>Q121G - South East Asian</a></p> 
+      {% endif %}
+
+      {% if file.code == 'Mixed' %}
+      <p><a href='{{ file.file.url }}'>Q121J - Mixed Origin</a></p> 
+      {% endif %}
+
+{% endfor %}
+
+<p style="margin : 0;">
+    102 - Work Situation. Select from sublist.
+<form action=download_file>
+<select name="downloaded_file_name" id="download_file">
+<option value="Summary-WorkingOnSite-20.xlsx">102A - Working On Site</option>
+<option value="Summary-WorkingOnSiteAndRemotely-20.xlsx">102A - Working On Site And Remotely</option>
+<option value="Summary-WorkingRemotely-20.xlsx">102A - Working Remotely</option>
+</select>
+<input type="submit" value="Submit">
+</form>
+</p>
+
+</body>
+
+{% endblock %}
+
+
+

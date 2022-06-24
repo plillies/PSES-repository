@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+.boxmodelsolid {
+  width: 1000px;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="boxmodelsolid">
+
+<div class="topnav">
+  <a href="{% url 'repository:home' %}"><b>Home</b></a>&nbsp; &nbsp; &nbsp; 
+  <a href="{% url 'repository:about' %}"><b>About</b></a>&nbsp; &nbsp; &nbsp; 
+  <a href="{% url 'repository:warranty' %}"><b>Warranty Disclaimer</b></a>
+</div>
+
+<h2>Technical Overview of PSES Analysis Python Program</h2>
+<p>This program overcomes a common shortcoming of survey analysis. Though survey analysis may identify general issues, 
+and even how these issues affect particular groups, 
+it does _not_ identify the bundles of associated questions that would help identify what action management needs to take to correct an issue.</p>
+<p>This program overcomes this shortcoming by not only identifying groups that have a below-average survey score, 
+but also by identifying associated questions that also have below-average scores. 
+This identification of associated questions makes more focussed corrective action possible.</p>
+<p>This program does _not_ aim to prove the statistical validity of the human-performance-management hypotheses that were used to construct the survey. 
+It assumes these hypotheses are correct, and then undertakes to find instances of the troublesome associations that are predicted by management theory.</p>
+<p>Because this program does not depend on conventional statistical methodologies, such as Pearson or Spearman, sample size is not an issue. 
+In addition, rather than requiring raw data, this program makes use of data from the group level and has high tolerance for blanked scores, 
+which means that it can be used in circumstances where confidentiality is important.</p>
+<p>A note of caution. For lack of statistical validity, these results are of most value when used as guidelines for cultural auditing and investigation.</p>
+<p>For research purposes, I am making the Python program for deriving these results generally available under a GNU licence. Inquiries can be sent to Philip Lillies at <a href='mailto:plillies@hotmail.com'>plillies@hotmail.com</a>
+or to my LinkedIn address at <a href="https://www.linkedin.com/in/philip-lillies-3b134912/">linkedin.com/in/philip-lillies-3b134912</a>.</p>
+</div>
+
+</body>
+</html>
+
+
+
+

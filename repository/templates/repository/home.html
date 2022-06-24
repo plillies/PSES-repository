@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Results</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+/* Begin style the navbar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+/*End navbar style/*
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+    margin: 0 auto;
+    margin: 2em;
+    
+    width: 200px;
+    height: 400px;
+    background: skyblue;
+}
+.box1{
+    margin: 0 auto;
+    margin: 2em;
+
+    width: 200px;
+    height: 400px;
+    background: red;
+
+}
+.box2{
+    margin: 0 auto;
+    margin: 2em;
+
+    width: 200px;
+    height: 400px;
+    background: orange
+
+ }
+
+.box3{
+    margin: 0 auto;
+    margin: 2em;
+
+    width: 200px;
+    height: 400px;
+    background: palegreen
+
+ }
+
+ .box,.box1,.box2,.box3 {
+   display: inline-block;
+ }
+.contact {
+   text-align: center;
+ }
+
+div.leftbot {
+  position: absolute;
+  bottom: 200px;
+  left: 300px;
+  width: 80%;
+}
+
+div.rightbot {
+  position: absolute;
+  bottom: 200px;
+  left: 1500px;
+  width: 20%;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+  <h2>PSES Analysis Using Advanced Python Algorithms</h2>
+</div>
+<div class="topnav">
+  <a href="{% url 'repository:about' %}"><b>About</b></a>
+  <a href="{% url 'repository:warranty' %}"><b>Warranty Disclaimer</b></a>
+</div>
+<div class="contact">
+        <div class="box"><br><br><br><br><br><br><br><h2><a href="{% url 'repository:overallresults' %}">Overall<br>Results</a></h2></div>
+        <div class="box1"><br><br><br><br><br><br><br><h2><a href="{% url 'repository:departmentalresults' %}">Departmental Results</a></h2></div>
+        <div class="box2"><br><br><br><br><br><br><br><h2><a href="{% url 'repository:demographicresults' %}">Demographic Results</a></h2></div>
+        <div class="box3"><br><br><br><br><br><br><br><h2><a href="{% url 'repository:intersectionalresults' %}">Intersectional Results</a></h2></div>
+ </div>
+
+</body>
+</html>
